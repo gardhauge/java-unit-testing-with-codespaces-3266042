@@ -1,5 +1,6 @@
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -52,6 +53,13 @@ public class CalculatorTest {
     @Test
     public void testIsOdd() {
         assertFalse(calculator.isEven(3));
+    }
+
+    @Test
+    public void testIncrementArray() {
+        int[] expected = new int[] { 2, 3, 4 };
+        int[] actual = calculator.testIncrementArray(new int[] { 1, 2, 3 });
+        assertArrayEquals(expected, actual);
     }
 
 }

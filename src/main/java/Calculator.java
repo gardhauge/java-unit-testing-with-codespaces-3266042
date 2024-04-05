@@ -23,4 +23,12 @@ public class Calculator {
     return i % 2 == 0;
   }
 
+  public int[] testIncrementArray(int[] values) {
+    int[] newValues = new int[values.length];
+    for (int i = 0; i < values.length; i++) {
+      newValues[i] = values[i] + 1;
+    }
+    return newValues;
+  }
+
 }
